@@ -1,3 +1,4 @@
+//General stylings
 *,
 *::before,
 *::after {
@@ -5,3 +6,30 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: rgb(50, 50, 50);
+  font-weight: 400;
+}
+
+.App {
+  transition: margin 500ms ease;
+}
+
+/* Margin left - If Library is open  */
+.ml-30 {
+  margin-left: 10%;
+}
+
+//Imports partials
+@import "./player";
+@import "./song";
+@import "./library";
+@import "./navigation.scss";

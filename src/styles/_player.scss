@@ -9,13 +9,53 @@
 .time-control {
   width: 50%;
   display: flex;
-  input {
+  #input-container {
+    position: relative;
+    height: min-content;
     width: 100%;
-    padding: 1rem 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  input {
+    position: relative;
+    width: 100%;
+    -webkit-appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 12px;
+      width: 12px;
+      z-index: 5;
+      border-radius: 50%;
+    }
+    &::-moz-range-thumb {
+      -webkit-appearance: none;
+      height: 12px;
+      width: 12px;
+      z-index: 5;
+      border-radius: 50%;
+    }
   }
   p {
     padding: 1rem;
   }
+}
+
+#played-percentage {
+  position: absolute;
+  pointer-events: none;
+  z-index: -9;
+  height: 10px;
+  border-radius: 3px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 0;
+  margin-top: auto;
 }
 
 .play-control {
@@ -25,4 +65,14 @@
   padding: 1rem;
   width: 30%;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .time-control {
+    width: 90%;
+  }
+
+  .play-control {
+    width: 60%;
+  }
 }
