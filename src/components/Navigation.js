@@ -8,7 +8,7 @@ const Navigtion = ({ libraryStatus, setLibraryStatus }) => {
         <p>
           <span style={{ fontSize: "1.7rem" }}>V</span>INHER
         </p>
-        <h1> React Music Player</h1>
+        <h1> React MusiX</h1>
       </div>
       <button
         onClick={() => {
